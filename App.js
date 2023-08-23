@@ -19,26 +19,28 @@ export default function App() {
                     alignItems:'center', justifyContent:'center'}}/>
         <text>Calculadora</text>
         <text>valor 1</text>
-        <TextInput>
+        <TextInput 
           placeholder='Ingrese el valor 1'
           onChangeText={value1 => setValue1(value1)}
           value={value1}
-          style={styles.tInputs}
-        </TextInput>
+          style={styles.tInputs}/>
 
         <text>valor 2</text>
-        <TextInput>
+        <TextInput 
           placeholder='Ingrese el valor 2'
           onChangeText={value2 => setValue2(value2)}
           value={value2}
-          style={styles.tInputs}
-        </TextInput>
+          style={styles.tInputs}/>
 
-        <view>
-           style={{flexDirection:'row',}}
+        <view style={{flexDirection:'row', marginTop:20}}>
             <TouchableOpacity>
               style={{backgroundColor:'green',padding:5 , borderRadius:10}}
-              <text>+</text>
+              <text style={{fontWeight:'bold'}}>+</text>
+            </TouchableOpacity>
+
+            <TouchableOpacity>
+              style={{backgroundColor:'gray',padding:5 , borderRadius:10 ,marginLeft:5}}
+              <text style={{fontWeight:'bold'}}>-</text>
             </TouchableOpacity>
           </view>
 
