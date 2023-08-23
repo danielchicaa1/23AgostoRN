@@ -16,7 +16,7 @@ export default function App() {
     <View style={styles.container}>
       <Banner imagename={mimage}/>
       <view style={{ flex:4,backgroundColor:'gray', width:'100%',
-                    alignItems:'center', justifyContent:'center'}}>
+                    alignItems:'center', justifyContent:'center'}}/>
         <text>Calculadora</text>
         <text>valor 1</text>
         <TextInput>
@@ -34,7 +34,13 @@ export default function App() {
           style={styles.tInputs}
         </TextInput>
 
-      </view>
+        <view>
+           style={{flexDirection:'row',}}
+            <TouchableOpacity>
+              style={{backgroundColor:'green',padding:5 , borderRadius:10}}
+              <text>+</text>
+            </TouchableOpacity>
+          </view>
 
       <view style={{flex:1 , alignItems:'center' , justifyContent:'center'}}>
         <footer message="este es el pie"></footer>
