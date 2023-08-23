@@ -25,8 +25,17 @@ export default function App() {
           value={value1}
           style={styles.tInputs}
         </TextInput>
+
+        <text>valor 2</text>
+        <TextInput>
+          placeholder='Ingrese el valor 2'
+          onChangeText={value2 => setValue2(value2)}
+          value={value2}
+          style={styles.tInputs}
+        </TextInput>
+
       </view>
-      
+
       <view style={{flex:1 , alignItems:'center' , justifyContent:'center'}}>
         <footer message="este es el pie"></footer>
       </view>
