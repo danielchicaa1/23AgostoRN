@@ -30,6 +30,12 @@ export default function App() {
       case "/":
         mresult=mvalue1/mvalue2;
         break;
+      case "^":
+        mresult=math.pow(mvalue1, mvalue2);
+        break;
+      case "√":
+          mresult=math.sqrt(mvalue1+mvalue2)
+          break;
       }
       setResult(mresult); //Actualizando la variable de estado
   }
@@ -107,6 +113,34 @@ export default function App() {
           onPress={()=>calculate("/")}
         >
           Dividir
+        </Button>
+      </View>
+
+      <View style={{ flexDirection: "row", marginTop: 20 }}>
+        <Button
+          icon="format-superscript"
+          mode="contained"
+          onPress={()=>calculate("^")}
+        >
+          Exponente
+        </Button>
+
+        <Button
+          icon="square-root"
+          mode="contained"
+          onPress={()=>calculate("√")}
+        >
+          Raiz
+        </Button>
+      </View>
+
+      <View style={{ flexDirection: "row", marginTop: 20 }}>
+        <Button
+          icon="eraser"
+          mode="contained"
+          onPress={()=>{setValue1(''),setValue2(''),setResult('')}}
+        >
+          Limpiar
         </Button>
       </View>
       {/* <TouchableOpacity>
