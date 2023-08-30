@@ -6,4 +6,3 @@ export default function Footer(props) {
       <Text>{props.message}</Text>
   );
 }
-
